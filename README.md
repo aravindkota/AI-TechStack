@@ -1,53 +1,41 @@
-# AI TechStack Career Dashboard
+# AI TechStack
 
-A React + Vite dashboard that helps learners explore AI career paths, recommended GitHub repositories, and project ideas by skill level.
+Reference repository for AI career roles, roadmaps, curated resources, and project ideas.
 
-The app presents 10 AI-related roles and lets users switch between:
-- Tech stack recommendations
-- Curated GitHub repos
-- Portfolio project ideas
+---
 
-## Features
+## Overview
 
-- 10 AI roles (AI Engineer, AI Researcher, Agentic AI Developer, and more)
-- 3 progressive levels: Beginner, Intermediate, Advanced
-- Searchable role sidebar
-- Tabbed role detail view:
-  - Tech Stack
-  - GitHub Repos
-  - Project Ideas
-- Curated repository metadata (type + approximate stars)
-- Single-page UI built with React
+This project organizes existing AI learning resources into a single role-based dashboard so learners can move from exploration to execution.
 
-## Tech Stack
+Each role includes:
+- a level-based tech stack (`Beginner`, `Intermediate`, `Advanced`)
+- curated GitHub and web references (`Roadmap`, `Projects`, `Resources`, `Papers`)
+- portfolio-ready project ideas
 
-- React 19
-- Vite 8
-- JavaScript (JSX)
-- Inline styling (component-level style objects)
+## Role Library
 
-## Project Structure
+| Role | Focus |
+| --- | --- |
+| AI Engineer | Build and deploy AI-powered products |
+| AI Researcher | Advance models through experiments and papers |
+| Agentic AI Developer | Build autonomous tool-using agents |
+| AI Architect | Design end-to-end AI system architecture |
+| Data Scientist | Analyze data and build predictive solutions |
+| ML Engineer | Train, optimize, and serve ML models |
+| ML Ops Engineer | Build CI/CD and platform pipelines for ML |
+| AI Ops Engineer | Operate and monitor production AI systems |
+| Prompt Engineer | Design and evaluate robust prompt systems |
+| AI Cloud Architect | Architect cloud-native AI platforms |
 
-```text
-AI-TechStack/
-|- ai-dashboard/                # Main runnable Vite app
-|  |- src/
-|  |  |- App.jsx                # Dashboard data + UI
-|  |  |- main.jsx               # React entry point
-|  |- package.json
-|  |- index.html
-|- ai-career-dashboard.jsx      # Standalone source version
-|- ai-career-dashboard-v2.jsx   # Updated standalone source version
-```
+## Why This Repo
 
-## Getting Started
+- Role-first structure instead of random resource lists
+- Practical progression from fundamentals to advanced depth
+- Curated links plus project ideas for portfolio building
+- Interactive UI for fast discovery
 
-### Prerequisites
-
-- Node.js 18+ (recommended)
-- npm
-
-### Run locally
+## Quick Start
 
 ```bash
 cd ai-dashboard
@@ -55,46 +43,41 @@ npm install
 npm run dev
 ```
 
-Open the local URL shown by Vite (usually `http://localhost:5173`).
+Then open `http://localhost:5173`.
 
-### Build for production
+## Repo Structure
 
-```bash
-cd ai-dashboard
-npm run build
-npm run preview
+```text
+AI-TechStack/
+|- ai-dashboard/                # Main runnable React + Vite app
+|  |- src/
+|  |  |- App.jsx                # Roles, levels, resources, UI logic
+|  |  |- main.jsx               # App entry point
+|  |- package.json
+|- ai-career-dashboard.jsx      # Standalone snapshot
+|- ai-career-dashboard-v2.jsx   # Latest standalone snapshot
+|- README.md
 ```
 
-## Notes
+## How To Use
 
-- The main app to run is inside `ai-dashboard/`.
-- `ai-career-dashboard.jsx` and `ai-career-dashboard-v2.jsx` are standalone file versions kept at repo root.
-- Repository stars listed in the UI are approximate and reflect the curation time.
+1. Select a role from the sidebar.
+2. Pick your level (`Beginner`, `Intermediate`, `Advanced`).
+3. Use tabs:
+   - `Tech Stack` for what to learn
+   - `GitHub Repos` for external references
+   - `Project Ideas` for building your portfolio
+4. Repeat role-by-role to map your long-term roadmap.
 
-## Push to GitHub
+## Curation Notes
 
-If this folder is not already a Git repository, run:
+- Resource stars and ecosystem trends are time-sensitive.
+- This repository curates external resources; it does not replace them.
+- Levels are cumulative (advanced assumes beginner + intermediate foundations).
 
-```bash
-git init
-git add .
-git commit -m "Add AI TechStack dashboard project"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
-git push -u origin main
-```
+## Roadmap Direction
 
-If your repo already exists locally, just commit and push:
-
-```bash
-git add .
-git commit -m "Update project README"
-git push
-```
-
-## Future Improvements
-
-- Add screenshots or GIF demo to this README
-- Move role data into separate JSON modules
-- Add tests for filtering and tab logic
-- Add responsive/mobile layout refinements
+- Extract role data into structured JSON
+- Add role-specific docs in `docs/roles/`
+- Add contribution guide for resource updates
+- Add screenshots/GIF preview for GitHub
